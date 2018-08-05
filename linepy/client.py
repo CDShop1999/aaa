@@ -17,9 +17,9 @@ class LINE(Auth, Models, Talk, Square, Call, Timeline):
         if idOrAuthToken and passwd:
             self.loginWithCredential(_id=idOrAuthToken, passwd=passwd, certificate=certificate, systemName=systemName, appName=appName, keepLoggedIn=keepLoggedIn)
         elif idOrAuthToken and not passwd:
-            self.loginWithAuthToken(authToken=idOrAuthToken, appName=appName)
+            #self.loginWithAuthToken(authToken=idOrAuthToken, appName=appName)
 
-        self.__initAll()
+        #self.__initAll()
 
     def __initAll(self):
 
@@ -30,4 +30,4 @@ class LINE(Auth, Models, Talk, Square, Call, Timeline):
         Talk.__init__(self)
         Square.__init__(self)
         Call.__init__(self)
-        Timeline.__init__(self)
+        #Timeline.__init__(self)

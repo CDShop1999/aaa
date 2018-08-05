@@ -240,7 +240,7 @@ class Client(Iface):
          - channelId
         """
         self.send_approveChannelAndIssueChannelToken(channelId)
-        return self.recv_approveChannelAndIssueChannelToken()
+        #return self.recv_approveChannelAndIssueChannelToken()
 
     def send_approveChannelAndIssueChannelToken(self, channelId):
         self._oprot.writeMessageBegin('approveChannelAndIssueChannelToken', TMessageType.CALL, self._seqid)
@@ -264,7 +264,7 @@ class Client(Iface):
         if result.success is not None:
             return result.success
         if result.e is not None:
-            raise result.e
+            #raise result.e
         raise TApplicationException(TApplicationException.MISSING_RESULT, "approveChannelAndIssueChannelToken failed: unknown result")
 
     def approveChannelAndIssueRequestToken(self, channelId, otpId):

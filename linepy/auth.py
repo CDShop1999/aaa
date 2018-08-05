@@ -27,7 +27,7 @@ class Auth(object):
         self.channel    = Session(self.server.LINE_HOST_DOMAIN, self.server.Headers, self.server.LINE_CHAN_QUERY_PATH).Channel()
         self.square     = Session(self.server.LINE_HOST_DOMAIN, self.server.Headers, self.server.LINE_SQUARE_QUERY_PATH).Square()
         
-        self.revision = self.poll.getLastOpRevision()
+        #self.revision = self.poll.getLastOpRevision()
         self.isLogin = True
 
     def __loginRequest(self, type, data):
@@ -189,7 +189,7 @@ class Auth(object):
             'X-Line-Access': authToken
         })
         self.authToken = authToken
-        self.__loadSession()
+        #self.__loadSession()
 
     def __defaultCallback(self, str):
         print(str)

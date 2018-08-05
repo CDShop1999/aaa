@@ -15,7 +15,7 @@ def loggedIn(func):
 class Timeline(Channel):
 
     def __init__(self):
-        Channel.__init__(self, self.channel, self.server.CHANNEL_ID['LINE_TIMELINE'], False)
+        #Channel.__init__(self, self.channel, self.server.CHANNEL_ID['LINE_TIMELINE'], False)
         self.tl = self.getChannelResult()
         self.__loginTimeline()
         
